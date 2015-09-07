@@ -1,0 +1,12 @@
+{
+    "name": "deltasystems/teamwork-desk",
+    "description": "A PHP Wrapper for the Teamwork Desk API",
+    "autoload": {
+        "psr-4": {
+            "Teamwork\\": "src/Teamwork/"
+        }
+    },
+    "require": {
+        "php": ">=5.4.0"
+    }
+}
