@@ -15,7 +15,7 @@ class Thing extends Http\Request
     {
         if (is_array($id)) {
             $this->import($id);
-        } else {
+        } elseif (null !== $id) {
             $this->data = [];
             $this->data['id'] = $id;
         }
@@ -203,13 +203,15 @@ class Thing extends Http\Request
 
         foreach ($this->data as $key => $datum) {
             if (null === $datum) {
-                throw new Exception($key . ' is required in'
+                throw new \Exception($key . ' is required in '
                     . $this->getSimpleClassName());
             }
         }
 
+        $this->setPath($this->getMultipleUrl());
         $this->setVerb('POST');
         $this->setData($data);
+        $this->setHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
 
         $response = $this->send();
 
@@ -225,7 +227,7 @@ class Thing extends Http\Request
 
         foreach ($this->data as $key => $datum) {
             if (null === $datum) {
-                throw new Exception($key . ' is required in'
+                throw new Exception($key . ' is required in '
                     . $this->getSimpleClassName());
             }
         }
