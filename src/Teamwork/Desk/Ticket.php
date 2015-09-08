@@ -17,8 +17,8 @@ class Ticket extends Thing
             'customerMobileNumber' => '',
             'subject'              => null,
             'message'              => null,
-            'status'               => 'new',
-            'assignedTo'           => '-1',
+            'status'               => 'active',
+            'assignedTo'           => '',
             'notifyCustomer'       => 'false',
         ];
     }
@@ -69,6 +69,7 @@ class Ticket extends Thing
 
     public function create($data = [])
     {
+        $this->setPath('/tickets.json');
         $this->data = $this->handleDefaults($data, $this->data);
 
         parent::create();
