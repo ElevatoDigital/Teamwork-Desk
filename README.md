@@ -1,18 +1,16 @@
-A PHP Wrapper for [Teamwork Desk](https://www.teamwork.com/desk)'s API (That Is Completely Undocumented)
+A PHP Wrapper for [Teamwork Desk](https://www.teamwork.com/desk)'s API
 =======================================================================
 
 I wrote this completely out of necessity. As of writing this there are no other
 PHP wrappers for this API, Zapier doesn't support it, and no one that I can find
-is talking about it. All of these are probably because there is 0 documentation.
+is talking about it.
 We wanted to switch to Teamwork Desk from Zendesk because of the great
 integrations with [Teamwork Projects](https://www.teamwork.com/projects), and some of the useful features Teamwork Desk
 offers are not available in Zendesk.
 
 As for the API, I found some API-looking calls when I watch the network usage in
 Teamwork Desk, and I assumed the authentication would be the same as Teamwork
-Projects. After some testing, I found that the API exists, and is complete as far as I
-can tell; there's just no documentation. Since we're mostly "wingin' it" at this
-point, feel free to suggest changes and additions.
+Projects. After some testing, I found that the API exists and the offical Teamwork Desk documentation can be found [here](http://developer.teamwork.com/desk/). Feel free to suggest changes and additions.
 
 Getting Started:
 ----------------
